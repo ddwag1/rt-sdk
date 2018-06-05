@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/ddwag1/rt-sdk/issues"
   },
-  "homepage": "https://www.npmjs.com/package/rt-sdk",
+  "homepage": "https://npmjs.com/package/rt-sdk",
   "dependencies": {
     "node-fetch": "^2.1.2"
   },
