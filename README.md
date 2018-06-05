@@ -23,7 +23,13 @@ const rt = require('rt-sdk');
 ### Get all seasons of a specific show
 rt.seasons() takes a show slug.
 ```js
-rt.seasons('rt-podcast')
+const options = {
+    version: 1,
+    order: 'desc',
+    per_page: '10'
+}
+
+rt.seasons('rt-podcast', options)
     .then(seasons => {
         for (let season of seasons) {
             console.log(season.attributes.title);
