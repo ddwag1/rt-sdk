@@ -1,5 +1,24 @@
 {
+  "name": "rt-sdk",
+  "description": "",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddwag1/rt-sdk.git"
+  },
+  "keywords": [],
+  "author": "Dylan Byth (ddwag1)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ddwag1/rt-sdk/issues"
+  },
+  "homepage": "https://github.com/ddwag1/rt-sdk",
   "dependencies": {
     "node-fetch": "^2.1.2"
-  }
+  },
+  "devDependencies": {}
 }
