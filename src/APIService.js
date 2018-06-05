@@ -20,7 +20,7 @@ const get = (route, options) => {
     
     baseUrl += route
     
-    console.log('Requesting ' + baseUrl);
+    // console.log('Requesting ' + baseUrl);
     return fetch(baseUrl)
 }
 
