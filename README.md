@@ -5,12 +5,12 @@
 The rt-sdk is a simple little wrapper for Company X's APIs.
 
 You can request things like:
-  - series
-  - episodes
-  - livestreams
-  - search results
-  - products
-  - and many more stuffz!
+    - series
+    - episodes
+    - livestreams
+    - search results
+    - products
+    - and many more stuffz!
 
 # Get started!
 - Run `yarn add rt-sdk` in the root of your project. (This will add `rt-sdk` to your `package.json`)
@@ -21,7 +21,7 @@ const rt = require('rt-sdk');
 > Remember that all `rt-sdk` methods return a [Promise()](https://developers.google.com/web/fundamentals/primers/promises)
 
 ### Get all seasons of a specific show
-rt.seasons() takes a show slug
+rt.seasons() takes a show slug.
 ```js
 rt.seasons('rt-podcast')
     .then(seasons => {
@@ -45,7 +45,7 @@ rt.season('always-open-2018')
 ```
 
 ### Get a specific episode
-rt.episode() takes an episode slug
+rt.episode() takes an episode slug.
 ```js
 rt.episode('lets-play-2012-16')
     .then(episode => {
@@ -88,14 +88,48 @@ rt.livestreams()
 rt.series() only takes the optional `options` obj.
 ```js
 rt.series()
+    .then(series => {        
+        for (let serie of series) {
+            console.log(serie.attributes.title); 
+            console.log(serie.type); 
+            console.log(serie.attributes.slug);
+            console.log(serie.attributes.summary);
+        }
+    });
+```
+
+### Search Episodes
+rt.queryByEpisode()  takes a episode query (and `options`).
+```js
+rt.queryByEpisode('Mark Nutt')
     .then(episodes => {
         for (let episode of episodes) {
             console.log(episode.attributes.title); 
             console.log(episode.type); 
-            console.log(episode.attributes.description);
-            console.log(episode.included.images);
+            console.log(episode.attributes.slug);
         }
     });
 ```
 
 # In progress.. More coming soon!
+- Tests to make sure I dont break yer shit
+- TypeScript Typings
+- Options Obj (order, per_page, page)
+- Featured Products
+- Scope options
+- Schedule
+- All Channels
+- All Series in a Channel
+- All Episodes in a Channel
+- Featured Items in a Channel
+- Featured Products in a Channel
+- Show Episodes by Bulk
+- Related Series
+- Season Images
+- Episode Images
+- Episode Videos
+- Query by Series
+- List of all Genres
+- Bonus Features?
+- Marketing Banners..? ¯\_(ツ)_/¯ 
+

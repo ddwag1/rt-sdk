@@ -1,7 +1,7 @@
 
 const apiService = require('./src/APIService');
 
-const seasons = seriesSlug => apiService
+const seasons = (seriesSlug, options) => apiService
     .get('/shows/' + seriesSlug + '/seasons?per_page=10', options)
     .then(res => res.json())
     .then(body => Promise.resolve(body.data))
