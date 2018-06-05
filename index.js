@@ -31,7 +31,7 @@ const livestreams = (options) => apiService
     .then(res => res.json())
     .then(body => Promise.resolve(body.data));
 
-const queryByEpisode = (query, options) => apiService
+const searchEpisodes = (query, options) => apiService
     .get('/search?query=' + encodeURIComponent(query), options)
     .then(res => res.json())
     .then(body => Promise.resolve(body.data.filter(result => result._type === "episode")));
@@ -45,5 +45,5 @@ module.exports = {
     episode: episode,
     products: products,
     livestreams: livestreams,
-    queryByEpisode, queryByEpisode
+    searchEpisodes, searchEpisodes
 }

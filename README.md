@@ -31,6 +31,20 @@ const options = {
 }
 ```
 
+### Get all series
+rt.series() only takes the optional `options` obj.
+```js
+rt.series(options)
+    .then(series => {        
+        for (let serie of series) {
+            console.log(serie.attributes.title); 
+            console.log(serie.type); 
+            console.log(serie.attributes.slug);
+            console.log(serie.attributes.summary);
+        }
+    });
+```
+
 ### Get all seasons of a specific series
 rt.seasons() takes a series slug (and `options`).
 ```js
@@ -95,24 +109,10 @@ rt.livestreams(options)
     });
 ```
 
-### Get all series
-rt.series() only takes the optional `options` obj.
-```js
-rt.series(options)
-    .then(series => {        
-        for (let serie of series) {
-            console.log(serie.attributes.title); 
-            console.log(serie.type); 
-            console.log(serie.attributes.slug);
-            console.log(serie.attributes.summary);
-        }
-    });
-```
-
 ### Search Episodes
-rt.queryByEpisode() takes an episode query string (and `options`).
+rt.searchEpisodes() takes an episode query string (and `options`).
 ```js
-rt.queryByEpisode('Mark Nutt', options)
+rt.searchEpisodes('Mark Nutt', options)
     .then(episodes => {
         for (let episode of episodes) {
             console.log(episode.attributes.title); 
