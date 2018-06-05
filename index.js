@@ -6,12 +6,8 @@ const seasons = seriesSlug => apiService
     .then(res => res.json())
     .then(body => Promise.resolve(body.data))
 
-const series = () => {
-    console.log('series');
-}
-
-const recentlyUpdatedSeries = options => apiService //change to series() allow user to filter
-    .get('/shows?per_page=11&order=desc') // remove per page add to option, optionss
+const series = options => apiService //change to series() allow user to filter
+    .get('/shows', options) // remove per page add to option, optionss
     .then(res => res.json())
     .then(body => Promise.resolve(body.data))
 
@@ -48,7 +44,6 @@ const queryByEpisode = (query, options) => apiService
 module.exports = {
     seasons: seasons,
     series: series,
-    recentlyUpdatedSeries: recentlyUpdatedSeries,
     season: season,
     episode: episode,
     products: products,
