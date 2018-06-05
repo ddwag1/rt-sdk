@@ -1,7 +1,7 @@
 {
   "name": "rt-sdk",
   "description": "",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/ddwag1/rt-sdk/issues"
   },
-  "homepage": "https://github.com/ddwag1/rt-sdk",
+  "homepage": "https://www.npmjs.com/package/rt-sdk",
   "dependencies": {
     "node-fetch": "^2.1.2"
   },

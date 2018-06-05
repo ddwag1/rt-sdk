@@ -13,7 +13,7 @@ You can request things like:
   - and many more stuffz!
 
 # Get started!
-- Run `yarn add rt-sdk` in the project folder of your project. (This will add `rt-sdk` to your `package.json`)
+- Run `yarn add rt-sdk` in the root of your project. (This will add `rt-sdk` to your `package.json`)
 ```js
 const rt = require('rt-sdk');
 ```
