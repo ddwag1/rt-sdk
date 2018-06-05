@@ -1,5 +1,5 @@
 
-const apiService = require('./APIService');
+const apiService = require('./src/APIService');
 
 const seasons = seriesSlug => apiService
     .get('/shows/' + seriesSlug + '/seasons?per_page=10', options)
