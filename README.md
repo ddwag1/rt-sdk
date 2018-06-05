@@ -26,7 +26,8 @@ rt.seasons() takes a show slug.
 const options = {
     version: 1,
     order: 'desc',
-    per_page: '10'
+    per_page: '10',
+    page: 1
 }
 
 rt.seasons('rt-podcast', options)
