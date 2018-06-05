@@ -43,7 +43,7 @@ rt.seasons('rt-podcast', options)
 ### Get all episodes of a specific season
 rt.season() takes a season slug (and `options`).
 ```js
-rt.season('always-open-2018')
+rt.season('always-open-2018', options)
     .then(episodes => {
         for (let episode of episodes) {
             console.log(episode.attributes.title);
@@ -56,7 +56,7 @@ rt.season('always-open-2018')
 ### Get a specific episode
 rt.episode() takes an episode slug (and `options`).
 ```js
-rt.episode('lets-play-2012-16')
+rt.episode('lets-play-2012-16', options)
     .then(episode => {
         console.log(episode.attributes.show_title);
         console.log(episode.attributes.title); 
@@ -68,7 +68,7 @@ rt.episode('lets-play-2012-16')
 ### Get all products of a specific series
 rt.products() takes a series slug (and `options`). If there isn't a specific product collection associated with the series it will return generic products;
 ```js
-rt.products('cow-chop-gaming')
+rt.products('cow-chop-gaming', options)
     .then(products => {
         for (let product of products) {
             console.log(product.title);
@@ -82,7 +82,7 @@ rt.products('cow-chop-gaming')
 ### Get all upcoming (or in progress) livestreams
 rt.livestream() only takes the optional `options` obj.
 ```js
-rt.livestreams()
+rt.livestreams(options)
     .then(episodes => {
         for (let episode of episodes) {
             console.log(episode.attributes.title); 
@@ -96,7 +96,7 @@ rt.livestreams()
 ### Get all series
 rt.series() only takes the optional `options` obj.
 ```js
-rt.series()
+rt.series(options)
     .then(series => {        
         for (let serie of series) {
             console.log(serie.attributes.title); 
@@ -108,9 +108,9 @@ rt.series()
 ```
 
 ### Search Episodes
-rt.queryByEpisode()  takes a episode query (and `options`).
+rt.queryByEpisode() takes a episode query string (and `options`).
 ```js
-rt.queryByEpisode('Mark Nutt')
+rt.queryByEpisode('Mark Nutt', options)
     .then(episodes => {
         for (let episode of episodes) {
             console.log(episode.attributes.title); 
