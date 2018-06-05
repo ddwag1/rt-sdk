@@ -5,12 +5,12 @@
 The rt-sdk is a simple little wrapper for Company X's APIs.
 
 You can request things like:
-    - series
-    - episodes
-    - livestreams
-    - search results
-    - products
-    - and many more stuffz!
+- series
+- episodes
+- livestreams
+- search results
+- products
+- and many more stuffz!
 
 # Get started!
 - Run `yarn add rt-sdk` in the root of your project. (This will add `rt-sdk` to your `package.json`)
