@@ -15,13 +15,15 @@ You can request things like:
 # Get started!
 - Run `yarn add rt-sdk` in the root of your project. (This will add `rt-sdk` to your `package.json`)
 ```js
+// Import the rt-sdk
 const rt = require('rt-sdk');
 ```
 - Use one of the available methods listed below to start building!
-> Remember that all `rt-sdk` methods return a [Promise()](https://developers.google.com/web/fundamentals/primers/promises)
+- Remember that all `rt-sdk` methods return a [Promise()](https://developers.google.com/web/fundamentals/primers/promises)
+- Also remember that the `options` object isn't required... [its.. optional.](https://www.youtube.com/watch?v=LQ59UVFQJII)
 
 ### Get all seasons of a specific show
-rt.seasons() takes a show slug.
+rt.seasons() takes a show slug (and `options`).
 ```js
 const options = {
     version: 1,
@@ -39,7 +41,7 @@ rt.seasons('rt-podcast', options)
 ```
 
 ### Get all episodes of a specific season
-rt.season() takes a season slug
+rt.season() takes a season slug (and `options`).
 ```js
 rt.season('always-open-2018')
     .then(episodes => {
@@ -52,7 +54,7 @@ rt.season('always-open-2018')
 ```
 
 ### Get a specific episode
-rt.episode() takes an episode slug.
+rt.episode() takes an episode slug (and `options`).
 ```js
 rt.episode('lets-play-2012-16')
     .then(episode => {
