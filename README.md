@@ -19,7 +19,7 @@ const rt = require('rt-sdk');
 ```
 - Use one of the available methods listed below to start building!
 - Remember that all `rt-sdk` methods return a [Promise()](https://developers.google.com/web/fundamentals/primers/promises)
-- Also remember that the `options` object isn't required... [its.. optional.](https://www.youtube.com/watch?v=LQ59UVFQJII)
+- Also remember that the `options` object isn't required... [its.. optional.](https://www.youtube.com/watch?v=Y_UmTeepGLw)
 
 ### Define your options
 The `options` object is a way of customizing your request to the `rt-sdk`. It isn't required, but setting `options` can be pretty helpful if you want to organize the results before the Promise resolves. You can use it to set maximum page item limits, organize items by oldest to newest, request a specific page of the results, etc. (If you aren't using any options, don't bother passing it to the method.) 
