@@ -22,8 +22,8 @@ const rt = require('rt-sdk');
 - Remember that all `rt-sdk` methods return a [Promise()](https://developers.google.com/web/fundamentals/primers/promises)
 - Also remember that the `options` object isn't required... [its.. optional.](https://www.youtube.com/watch?v=LQ59UVFQJII)
 
-### Get all seasons of a specific show
-rt.seasons() takes a show slug (and `options`).
+### Get all seasons of a specific series
+rt.seasons() takes a series slug (and `options`).
 ```js
 const options = {
     version: 1,
@@ -65,8 +65,8 @@ rt.episode('lets-play-2012-16')
     });
 ```
 
-### Get all products of a specific show
-rt.products() takes a show slug (and `options`). If there isn't a specific product collection associated with the show it will return generic products;
+### Get all products of a specific series
+rt.products() takes a series slug (and `options`). If there isn't a specific product collection associated with the series it will return generic products;
 ```js
 rt.products('cow-chop-gaming')
     .then(products => {
