@@ -49,7 +49,7 @@ module.exports = {
     seasons: seasons,
     series: series,
     recentlyUpdatedSeries: recentlyUpdatedSeries,
-    episodes: episodes,
+    season: season,
     episode: episode,
     products: products,
     livestreams: livestreams,
