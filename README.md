@@ -22,16 +22,19 @@ const rt = require('rt-sdk');
 - Remember that all `rt-sdk` methods return a [Promise()](https://developers.google.com/web/fundamentals/primers/promises)
 - Also remember that the `options` object isn't required... [its.. optional.](https://www.youtube.com/watch?v=LQ59UVFQJII)
 
-### Get all seasons of a specific series
-rt.seasons() takes a series slug (and `options`).
+### Define your options
+The `options` object is a way of customizing your request to the `rt-sdk`. It isn't required, but setting `options` can be pretty helpful if you want to organize the results before the Promise resolves. You can use it to set max item limits, organize items by oldest to newest, request a specific page of the results, etc.
 ```js
 const options = {
-    version: 1,
     order: 'desc',
     per_page: '10',
     page: 1
 }
+```
 
+### Get all seasons of a specific series
+rt.seasons() takes a series slug (and `options`).
+```js
 rt.seasons('rt-podcast', options)
     .then(seasons => {
         for (let season of seasons) {
