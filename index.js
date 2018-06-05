@@ -6,8 +6,8 @@ const seasons = (seriesSlug, options) => apiService
     .then(res => res.json())
     .then(body => Promise.resolve(body.data))
 
-const series = options => apiService //change to series() allow user to filter
-    .get('/shows', options) // remove per page add to option, optionss
+const series = options => apiService
+    .get('/shows', options)
     .then(res => res.json())
     .then(body => Promise.resolve(body.data))
 
@@ -36,10 +36,7 @@ const queryByEpisode = (query, options) => apiService
     .then(res => res.json())
     .then(body => Promise.resolve(body.data.filter(result => result._type === "episode")));
     
-    //TODO: handle no results
-    
-    // https://svod-be.roosterteeth.com/api/v1/featured_products
-    
+    //TODO: handle no results and reject()    
     
 module.exports = {
     seasons: seasons,
