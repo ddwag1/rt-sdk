@@ -1,8 +1,7 @@
 # rt-sdk
+The rt-sdk is a simple little wrapper for Company X's APIs.
 
 [![npm version](https://badge.fury.io/js/rt-sdk.svg)](https://badge.fury.io/js/rt-sdk)
-
-The rt-sdk is a simple little wrapper for Company X's APIs.
 
 You can request things like:
 - series
