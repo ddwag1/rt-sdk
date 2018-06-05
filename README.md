@@ -69,7 +69,7 @@ rt.episode('lets-play-2012-16', options)
 ```
 
 ### Get all products of a specific series
-rt.products() takes a series slug (and `options`). If there isn't a specific product collection associated with the series it will return generic products;
+rt.products() takes a series slug (and `options`). If there isn't a specific product collection associated with the series it will return generic products.
 ```js
 rt.products('cow-chop-gaming', options)
     .then(products => {
@@ -111,7 +111,7 @@ rt.series(options)
 ```
 
 ### Search Episodes
-rt.queryByEpisode() takes a episode query string (and `options`).
+rt.queryByEpisode() takes an episode query string (and `options`).
 ```js
 rt.queryByEpisode('Mark Nutt', options)
     .then(episodes => {
@@ -124,7 +124,7 @@ rt.queryByEpisode('Mark Nutt', options)
 ```
 
 # In progress.. More coming soon!
-- Tests to make sure I dont break yer shit
+- Tests to make sure I don't deploy and break yer shit
 - TypeScript Typings
 - Options Obj (order, per_page, page)
 - Featured Products
