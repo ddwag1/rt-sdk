@@ -2,7 +2,7 @@
 const apiService = require('./src/APIService');
 
 const seasons = (seriesSlug, options) => apiService
-    .get('/shows/' + seriesSlug + '/seasons?per_page=10', options)
+    .get('/shows/' + seriesSlug + '/seasons', options) // ?per_page=10
     .then(res => res.json())
     .then(body => Promise.resolve(body.data))
 
@@ -12,7 +12,7 @@ const series = options => apiService
     .then(body => Promise.resolve(body.data))
 
 const season = (seasonSlug, options) => apiService
-    .get('/seasons/' + seasonSlug + '/episodes?per_page=100', options)
+    .get('/seasons/' + seasonSlug + '/episodes', options) //?per_page=100
     .then(res => res.json())
     .then(body => Promise.resolve(body.data))
 
