@@ -19,6 +19,10 @@ const get = (route, options) => {
         //
     }
     
+    if (options && options.per_page) {
+        baseUrl += '&per_page=' + options.per_page
+    }
+    
     // if per page
     
     
